@@ -1,0 +1,338 @@
+const projects = [
+    {
+        title: "AI Integrated Smart Ecosystem (Senior Capstone)",
+        description:
+            "Built an AI-powered smart aquarium ecosystem that captures live tank images, runs fish detection, stores image/count data, and displays results through a web dashboard.",
+        tech: ["Python", "FastAPI", "YOLOv8", ".NET 9", "JWT", "SQLite", "React/Vite", "C++", "XUnit"],
+        github: "https://github.com/Ryan-Holden/SmartEcosystem",
+    },
+    {
+        title: "project 2",
+        description:
+            "description",
+        tech: ["a"],
+        github: "a",
+    },
+    {
+        title: "project 3",
+        description:
+            "description",
+        tech: ["a"],
+        github: "a",
+    },
+];
+
+const skills = [
+    "C#",
+    ".NET Core",
+    ".NET Framework",
+    "REST APIs",
+    "SQL Server",
+    "CI/CD",
+    "SQLite",
+    "React/Vite",
+    "Java",
+    "Git"
+];
+
+function LeetCode() {
+    return (
+        <section id="leetcode" className="border-t border-white/10 bg-slate-900/40">
+            <div className="mx-auto max-w-6xl px-6 py-20">
+                <SectionHeader eyebrow="LeetCode" title="Problem Solving Activity" />
+
+                <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+                    I use LeetCode to practice data structures, algorithms, and technical interview problem solving.
+                </p>
+
+                <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4">
+                    <img
+                        src="https://leetcard.jacoblin.cool/carsoni?theme=dark&ext=heatmap"
+                        alt="LeetCode activity heatmap"
+                        className="w-full"
+                    />
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function App() {
+    return (
+        <main className="min-h-screen bg-slate-950 text-slate-100">
+            <Navbar />
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+            <LeetCode />
+            <Skills />
+            <Contact />
+        </main>
+    );
+}
+
+function Navbar() {
+    return (
+        <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                <a href="#" className="text-lg font-bold tracking-tight">
+                    Carson Irving
+                </a>
+
+                <div className="hidden gap-6 text-sm text-slate-300 md:flex">
+                    <a className="transition hover:text-sky-400" href="#about">
+                        About
+                    </a>
+                    <a className="transition hover:text-sky-400" href="#experience">
+                        Experience
+                    </a>
+                    <a className="transition hover:text-sky-400" href="#projects">
+                        Projects
+                    </a>
+                    <a className="transition hover:text-sky-400" href="#contact">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </nav>
+    );
+}
+
+function Hero() {
+    return (
+        <section className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+            <div>
+                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-sky-400">
+                    Software Developer
+                </p>
+
+                <h1 className="max-w-3xl text-5xl font-bold tracking-tight text-white md:text-7xl">
+                    Hi, I’m Ryan
+                </h1>
+
+                <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+                    I’m an Iowa State University graduate with a Bachelor of Science in Software Engineering.
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-4">
+                    <a
+                        href="#projects"
+                        className="rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300"
+                    >
+                        View Projects
+                    </a>
+
+                    <a
+                        href="#contact"
+                        className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400"
+                    >
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    );
+}
+
+function About() {
+    return (
+        <section id="about" className="border-t border-white/10 bg-slate-900/40">
+            <div className="mx-auto max-w-6xl px-6 py-20">
+                <SectionHeader eyebrow="About" title="A developer who understands business workflows." />
+
+                <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+                    about
+                </p>
+            </div>
+        </section>
+    );
+}
+
+function Experience() {
+    return (
+        <section id="experience">
+            <div className="mx-auto max-w-6xl px-6 py-20">
+                <SectionHeader eyebrow="Experience" title="Work Experience" />
+
+                <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8">
+                    <div className="flex flex-col justify-between gap-4 md:flex-row">
+                        <div>
+                            <h3 className="text-2xl font-bold text-white">
+                                a
+                            </h3>
+                            <p className="mt-1 text-sky-400">name</p>
+                        </div>
+
+                        <p className="text-sm text-slate-400">
+                            b
+                        </p>
+                    </div>
+
+                    <p className="mt-6 leading-7 text-slate-300">
+                        c
+                    </p>
+
+                    <div className="mt-6 flex flex-wrap gap-2">
+                        {[".NET Framework", "SQL Server", "WPF", "Power Apps", "CRM REST API", "VBA"].map(
+                            (item) => (
+                                <span
+                                    key={item}
+                                    className="rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 text-sm text-sky-300"
+                                >
+                                    {item}
+                                </span>
+                            )
+                        )}
+                    </div>
+
+                    <ul className="mt-8 space-y-4 text-slate-300">
+                        <li>
+                            1
+                        </li>
+                        <li>
+                            2
+                        </li>
+                        <li>
+                            3
+                        </li>
+                        <li>
+                            4
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function Projects() {
+    return (
+        <section id="projects" className="border-y border-white/10 bg-slate-900/40">
+            <div className="mx-auto max-w-6xl px-6 py-20">
+                <SectionHeader eyebrow="Projects" title="Featured Projects" />
+
+                <div className="mt-10 grid gap-6 md:grid-cols-3">
+                    {projects.map((project) => (
+                        <article
+                            key={project.title}
+                            className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-sky-400/50"
+                        >
+                            <h3 className="text-xl font-bold text-white">{project.title}</h3>
+
+                            <p className="mt-4 flex-1 leading-7 text-slate-300">
+                                {project.description}
+                            </p>
+
+                            <div className="mt-6 flex flex-wrap gap-2">
+                                {project.tech.map((tech) => (
+                                    <span
+                                        key={tech}
+                                        className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="mt-6 inline-flex w-fit rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-sky-400 hover:text-sky-400"
+                            >
+                                View GitHub Repo
+                            </a>
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function Skills() {
+    return (
+        <section>
+            <div className="mx-auto max-w-6xl px-6 py-20">
+                <SectionHeader eyebrow="Skills" title="Technical Skills" />
+
+                <div className="mt-10 flex flex-wrap gap-3">
+                    {skills.map((skill) => (
+                        <span
+                            key={skill}
+                            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-300"
+                        >
+                            {skill}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function Contact() {
+    return (
+        <section id="contact" className="border-t border-white/10 bg-slate-900/40">
+            <div className="mx-auto max-w-6xl px-6 py-20">
+                <SectionHeader eyebrow="Contact" title="Let’s connect." />
+
+                <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+                    I’m interested in software development, IT, and business 
+                    application roles where I can build useful systems and keep
+                    learning.
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-4">
+                    <a
+                        href="mailto:ryanholden.iastate@gmail.com"
+                        className="rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300"
+                    >
+                        Email Me
+                    </a>
+
+                    <a
+                        href="https://github.com/Ryan-Holden"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/ryan-holden-417985305/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400"
+                    >
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function SectionHeader({
+    eyebrow,
+    title,
+}: {
+    eyebrow: string;
+    title: string;
+}) {
+    return (
+        <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-400">
+                {eyebrow}
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-white md:text-5xl">
+                {title}
+            </h2>
+        </div>
+    );
+}
+
+export default App;
